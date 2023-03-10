@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+.main {
+  background-color: #dae1e0;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 1rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.bayan {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bayan__title {
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 0;
+  width: 100%;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.bayan__body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.item {
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-top: 0.125rem solid #c1c1c1;
+}
+
+.item:hover > .item__image {
+  max-height: 100%;
+  opacity: 1;
+  visibility: visible;
+  transition: 1.5s opacity, 1.5s visibility, 0.05s max-height;
+}
+
+.item__header {
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.item__title {
+  margin: 0;
+  padding: 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.item__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url('./images/plus_icon.svg');
+  background-position: center;
+  background-size: contain;
+}
+
+.item__image {
+  align-self: center;
+  width: 90%;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 1.5s opacity, 1.5s visibility, 0.05s max-height;
+}
+
+input {
+  display: none;
+}
+
+input:checked + .item > .item__image {
+  max-height: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+
+input:checked + .item .item__icon {
+  background-image: url('./images/minus_icon.svg');
+}
