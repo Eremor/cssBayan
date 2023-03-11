@@ -5,6 +5,7 @@ body {
   padding: 0;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
+  background-color: #dae1e0;
 }
 
 .main {
@@ -51,13 +52,6 @@ body {
   border-top: 0.125rem solid #c1c1c1;
 }
 
-.item:hover > .item__image {
-  max-height: 100%;
-  opacity: 1;
-  visibility: visible;
-  transition: 1.5s opacity, 1.5s visibility, 0.05s max-height;
-}
-
 .item__header {
   padding: 0.5rem 0;
   display: flex;
@@ -102,4 +96,51 @@ input:checked + .item > .item__image {
 
 input:checked + .item .item__icon {
   background-image: url('./images/minus_icon.svg');
+}
+
+.item:hover > .item__image {
+  max-height: 100%;
+  opacity: 1;
+  visibility: visible;
+  transition: 1.5s opacity, 1.5s visibility, 0.05s max-height;
+}
+
+.item:hover .item__icon {
+  background-image: url('./images/minus_icon.svg');
+}
+
+@media screen and (min-width: 820px) {
+  .wrapper {
+    padding: 2rem 0;
+  }
+
+  .bayan {
+    width: 70%;
+  }
+
+  .bayan__title {
+    margin-bottom: 1.5rem;
+  }
+
+  .item {
+    padding-top: 0.5rem;
+    cursor: pointer;
+  }
+
+  .item__title {
+    font-size: 1.25rem;
+  }
+
+  .item__image {
+    width: 60%;
+  }
+
+  .item__icon {
+    opacity: 0;
+  }
+
+  .bayan__body:hover .item__icon {
+    opacity: 1;
+  }
+
 }
